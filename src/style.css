@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+:root {
+  --f-primary: "Barlow Semi Condensed", sans-serif;
+  --c-violet: hsl(263, 55%, 52%);
+  --c600: hsl(217, 19%, 35%);
+  --c700: hsl(219, 29%, 14%);
+  --c200: hsl(0, 0%, 81%);
+  --c100: hsl(210, 46%, 95%);
+  --c-white: hsl(0, 0%, 100%);
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  font-family: var(--f-primary);
+  background-color: var(--c100);
+}
+
+.profileBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 10px;
+}
+
+.profileBox img {
+  border-radius: 50%;
+  border: solid 1px var(--c-white);
+}
+
+.testimonial {
+  box-shadow: 2px 10px 20px rgba(93, 93, 93, 0.152);
+  padding: 2rem;
+  border-radius: 10px; 
+}
+
+.testimonialShort{
+    margin: 1rem 0; 
+}
+
+.dark .name,
+.dark .testimonialShort {
+  color: var(--c-white);
+}
+
+.dark .graduate {
+  color: var(--c-white);
+  opacity: 50%;
+}
+
+.dark .testimonialLong {
+  color: var(--c-white);
+  opacity: 70%;
+} 
+
+.light .name,
+.light .testimonialShort {
+  color: var(--c600);
+}
+
+.light .graduate {
+  color: var(--c600);
+  opacity: 50%;
+}
+
+.light .testimonialLong {
+  color: var(--c600);
+  opacity: 70%;
+}
+
+.testimonialShort {
+  font-weight: 600;
+}
+
+.graduate {
+  font-size: 0.9rem;
+}
+
+.testimonialShort {
+  font-size: 1.2rem;
+}
+
+.daniel{
+    background: url(./images/bg-pattern-quotation.svg) no-repeat top  right 2rem  var(--c-violet);
+}
+
+.jonathan{
+    background-color: var(--c600);
+}
+
+.jeanette, .kira{
+    background-color: var(--c-white);
+}
+
+.patrick{
+    background-color: var(--c700);
+}
+
+.testimonial-grid{
+    padding: 3rem 1.5rem; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1.5rem  
+}
+
+@media (min-width: 750px) {
+    html{
+        overflow: hidden;
+    }
+    .testimonial-grid{
+        padding: 5rem; 
+        display: grid; 
+        
+        grid-template-columns: repeat(4, 1fr); 
+    }
+    .daniel, .patrick{
+        grid-column: span 2; 
+    }
+    .kira{
+        grid-column-start: 4; 
+        grid-row: 1 / span 2;  
+    }
+    
+}
