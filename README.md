@@ -14,7 +14,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/livinglifemeaning/Testimonial-Grid
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://livinglifemeaning.github.io/Testimonial-Grid/
 
 
 ### Built with
